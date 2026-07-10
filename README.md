@@ -1,7 +1,7 @@
 # Mulago National Referral Hospital - Electronic Health Records (EHR)
+ 
 
-
-A fully functional, modern Electronic Health Records (EHR) system designed to digitize patient management, clinical diagnoses, prescriptions, and administrative workflows at Mulago National Referral Hospital, Uganda.
+A fully functional, modern Electronic Health Records (EHR) system designed to digitize patient management, clinical diagnoses, prescriptions, and administrative workflows at Mulago National Referral Hospital, Uganda kampala.
 
 ## 🚀 Key Features
 
