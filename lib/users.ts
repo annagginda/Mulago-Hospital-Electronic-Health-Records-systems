@@ -19,3 +19,13 @@ export async function getAllUsers(): Promise<User[]> {
   // Filter out nulls if any
   return users.filter((u): u is User => u !== null);
 }
+
+export async function createUser(user: User): Promise<void> {
+  await redis.set(`user:${user.username}`, user);
+  
+  const usernames = await redis.get<string[]>('users:index') || [];
+  if (!usernames.includes(user.username)) {
+    usernames.push(user.username);
+    await redis.set('users:index', usernames);
+  }
+}
