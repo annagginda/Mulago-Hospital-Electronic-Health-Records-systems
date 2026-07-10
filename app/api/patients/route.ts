@@ -6,7 +6,7 @@ import { getAllPatients, createPatient } from '@/lib/patients';
 import type { SessionData, Patient } from '@/types';
 
 export async function GET() {
-  const session = await getIronSession<SessionData>(cookies(), sessionOptions);
+  const session = await getIronSession<SessionData>(await cookies(), sessionOptions);
   if (!session.userId) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
 
   const patients = await getAllPatients();
@@ -14,7 +14,7 @@ export async function GET() {
 }
 
 export async function POST(request: Request) {
-  const session = await getIronSession<SessionData>(cookies(), sessionOptions);
+  const session = await getIronSession<SessionData>(await cookies(), sessionOptions);
   if (!session.userId) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
 
   const data = await request.json() as Omit<Patient, 'id'>;

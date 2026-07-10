@@ -23,7 +23,7 @@ export async function POST(request: Request) {
       return NextResponse.json({ message: 'Account is inactive' }, { status: 403 });
     }
 
-    const session = await getIronSession<SessionData>(cookies(), sessionOptions);
+    const session = await getIronSession<SessionData>(await cookies(), sessionOptions);
 
     session.userId = user.id;
     session.username = user.username;

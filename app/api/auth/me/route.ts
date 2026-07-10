@@ -5,7 +5,7 @@ import { sessionOptions } from '@/lib/auth';
 import type { SessionData } from '@/types';
 
 export async function GET() {
-  const session = await getIronSession<SessionData>(cookies(), sessionOptions);
+  const session = await getIronSession<SessionData>(await cookies(), sessionOptions);
 
   if (!session.userId) {
     return NextResponse.json({ ok: false }, { status: 401 });

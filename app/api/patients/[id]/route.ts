@@ -7,7 +7,7 @@ import type { SessionData, Patient } from '@/types';
 
 export async function GET(request: Request, { params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
-  const session = await getIronSession<SessionData>(cookies(), sessionOptions);
+  const session = await getIronSession<SessionData>(await cookies(), sessionOptions);
   if (!session.userId) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
 
   const patient = await getPatient(id);
@@ -18,7 +18,7 @@ export async function GET(request: Request, { params }: { params: Promise<{ id: 
 
 export async function PUT(request: Request, { params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
-  const session = await getIronSession<SessionData>(cookies(), sessionOptions);
+  const session = await getIronSession<SessionData>(await cookies(), sessionOptions);
   if (!session.userId) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
 
   const data = await request.json() as Partial<Patient>;

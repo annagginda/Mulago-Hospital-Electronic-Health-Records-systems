@@ -128,10 +128,9 @@ export default function PatientsPage() {
       </Card>
 
       <SlideOver
-        isOpen={isRegisterOpen}
+        open={isRegisterOpen}
         onClose={() => setIsRegisterOpen(false)}
         title="Register New Patient"
-        description="Enter patient demographic details."
       >
         <form onSubmit={handleRegister} className="flex flex-col h-full">
           <div className="flex-1 overflow-y-auto p-6 space-y-4">
