@@ -49,7 +49,7 @@ export default function LoginPage() {
     <div className="min-h-screen bg-[#f4f6f9] flex flex-col items-center justify-center p-4">
       <div className="w-full max-w-[380px]">
         <div className="flex justify-center mb-8">
-          <Image src="/logo.svg" alt="Mulago EHR Logo" width={300} height={80} priority className="h-16 w-auto" />
+          <Image src="/logo.svg" alt="Mulago EHR Logo" width={300} height={80} priority className="h-28 w-auto" />
         </div>
         
         <Card className="shadow-sm">
