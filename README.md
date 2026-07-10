@@ -38,7 +38,7 @@ The system is pre-seeded with 15 realistic hospital staff accounts and patient r
 ### 1. Clone the repository
 ```bash
 git clone https://github.com/annagginda/Mulago-Hospital-Electronic-Health-Records-systems.git
-cd "Mulago-Hospital-Electronic-Health-Records-systems/mulago-ehr"
+cd Mulago-Hospital-Electronic-Health-Records-systems
 ```
 
 ### 2. Install dependencies
