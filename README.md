@@ -69,3 +69,6 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## 📄 License
 This project was developed for academic/proposal purposes for Mulago National Referral Hospital. All rights reserved.
+
+---
+**Created by Annet Nagginda**

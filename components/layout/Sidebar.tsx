@@ -66,9 +66,12 @@ export function Sidebar({ role, onClose }: SidebarProps) {
         })}
       </nav>
 
-      <div className="p-4 border-t border-border-outer text-center">
+      <div className="p-4 border-t border-border-outer text-center space-y-2">
         <div className="text-[10px] font-semibold text-txt-muted uppercase tracking-wider">
           View as: {role}
+        </div>
+        <div className="text-[9px] text-txt-placeholder uppercase tracking-wider">
+          Created by Annet Nagginda
         </div>
       </div>
     </div>

@@ -102,8 +102,9 @@ export default function LoginPage() {
           </div>
         </Card>
         
-        <div className="text-center mt-8 text-[11px] text-txt-placeholder tracking-wide">
+        <div className="text-center mt-8 text-[11px] text-txt-placeholder tracking-wide space-y-1">
           <p>© 2026 Mulago National Referral Hospital</p>
+          <p>Created by Annet Nagginda</p>
         </div>
       </div>
     </div>
